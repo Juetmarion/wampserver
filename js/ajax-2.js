@@ -21,3 +21,31 @@ function afficher(reponse) {
 
 }
 
+/* function afficher(reponse) {
+
+}
+ */
+
+
+//On peut même utiliser une fonction anonyme pour afficher le résultat
+/* ajaxGet("http://localhost/javascript-web-srv/data/langages.txt", function (reponse) {
+    console.log(reponse);
+}); */
+
+// Gestion du format JSON
+/*1 var avions = [
+    {
+        marque: "Airbus",
+        couleur: "A320"
+    },
+    {
+        marque: "Airbus",
+        couleur: "A380"
+    }
+];
+console.log(avions);
+// Transforme le tableau d'objets JS en chaîne de caractères JSON
+var texteAvions = JSON.stringify(avions);
+console.log(texteAvions);
+// Transforme la chaîne de caractères JSON en tableaux d'objets JavaScript
+console.log(JSON.parse(texteAvions)); 1*/
