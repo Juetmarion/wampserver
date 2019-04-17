@@ -1,3 +1,5 @@
+
+// on appelle ajaxGet avec url et callback afficher
 ajaxGet("http://localhost/javascript-web-srv/data/tableaux.json", afficher);
 
 function afficher(reponse) {
