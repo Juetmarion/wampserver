@@ -16,9 +16,10 @@
     })
   }
 
-  var getPosts = async function(){ // 1  on précise le async
+  var getPosts = async function(){ // 1  on précise le async et retourne une promise
     try {
         // on déclare response pour pouvoir faire attendre l'appel
+        // await resolve la promise
         var response = await get('https://jsonplaceholder.typicode.com/users')
         var users = JSON.parse(response)
         reponse = await get('https://jsonplaceholder.typicode.com/comments?userId='+ users[0].id)
@@ -39,12 +40,6 @@
   getFirstPosts().then(function(post){
       //console.log(post)
   })
-
-  // faire passer toutes les promesses :
-  // promise.all et on intègre dans un tableau les promesses
-/*   Promise.all([getPosts(), getFirstPosts()]).then(function (arr){
-      console.log(arr)
-  }) */
 
   var demo = async function(){
       var arr = await Promise.all([getPosts(), getFirstPosts()])
